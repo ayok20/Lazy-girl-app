@@ -169,3 +169,20 @@ button:hover {
   transform: scale(1.02);
   transition: all 0.2s ease-in-out;
 }
+
+.spotify-embed {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.spotify-embed h2 {
+  color: #7b2cbf;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.spotify-embed iframe {
+  border: 2px solid #e6ccff;
+  box-shadow: 0 6px 15px rgba(123, 44, 191, 0.15);
+  border-radius: 12px;
+}
