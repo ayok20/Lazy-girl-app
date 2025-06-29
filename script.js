@@ -76,3 +76,7 @@ function resetWater() {
   document.getElementById('water-count').textContent = waterCount;
   localStorage.setItem('lazyGirlWater', waterCount);
 }
+
+function closeWelcome() {
+  document.getElementById('welcome-overlay').style.display = 'none';
+}
