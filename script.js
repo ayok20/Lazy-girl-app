@@ -1,67 +1,46 @@
-// 🔄 Workouts & Buttons
 const workouts = [
-  "5-Min Morning Stretch",
-  "3-Min TikTok Dance",
-  "Couch Leg Lifts",
-  "Lazy Yoga Flow",
-  "Bedtime Wind-down"
+  "5-Minute Morning Stretch",
+  "Wall Sit Challenge",
+  "Lazy Bedtime Yoga",
+  "Seated Arm Circles",
+  "Leg Raises on the Couch"
 ];
 
 const affirmations = [
-  "You’re glowing AND growing! 💫",
-  "One stretch at a time, queen 👑",
-  "You got this, hot girl! 💖",
-  "Stretch now, slay later 💅🏾",
-  "You’re not lazy, you're energy-efficient 😌",
-  "Even slow progress is progress 🐢✨",
-  "Slay today, rest later 😘"
+  "You're glowing and growing!",
+  "You got this, hot girl!",
+  "Slay at your own pace 💅🏽",
+  "Your small steps matter 💖",
+  "Progress over perfection ✨"
 ];
 
-// 🔗 Selecting elements
-const shuffleBtn = document.querySelector(".shuffle");
-const startBtn = document.querySelector(".start");
-const workoutTitle = document.querySelector(".workout-title");
-const affirmationText = document.getElementById("affirmation-text");
-const timerDisplay = document.querySelector(".timer-display");
+const timerDisplay = document.querySelector('.timer-display');
+const shuffleBtn = document.querySelector('.shuffle');
+const startBtn = document.querySelector('.start');
+const workoutTitle = document.querySelector('.workout-title');
+const affirmationText = document.getElementById('affirmation-text');
 
-// 🔁 Shuffle Workout & Affirmation
-shuffleBtn.addEventListener("click", () => {
+shuffleBtn.addEventListener('click', () => {
   const randomWorkout = workouts[Math.floor(Math.random() * workouts.length)];
+  const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
   workoutTitle.textContent = randomWorkout;
-
-  const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
   affirmationText.textContent = randomAffirmation;
 });
 
-// 🔁 Load Affirmation on App Start
-window.addEventListener("load", () => {
-  const randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)];
-  affirmationText.textContent = randomAffirmation;
-});
+startBtn.addEventListener('click', startTimer);
 
-// 🕒 Timer Logic
-let countdown;
-startBtn.addEventListener("click", () => {
-  clearInterval(countdown);
-  let timeLeft = 300;
-
-  countdown = setInterval(() => {
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
+function startTimer() {
+  let time = 5 * 60;
+  const interval = setInterval(() => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
     timerDisplay.textContent = `⏱️ ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    time--;
 
-    if (timeLeft <= 0) {
-      clearInterval(countdown);
-      timerDisplay.textContent = "🎉 You did it, queen!";
-   
-// LET'S GOOOOOO CONFETTI TIME!
-    confetti({ 
-    particleCount: 150,
-    spread: 100,
-    origin: { y: 0.6 }
-    });
-  }
-    timeLeft--;
+    if (time < 0) {
+      clearInterval(interval);
+      timerDisplay.textContent = "🎉 You did it!";
+      confetti();
+    }
   }, 1000);
-});
-
+}
