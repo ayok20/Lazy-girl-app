@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lazy Girl’s Guide</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="app-container">
     <h1>Lazy Girl’s Guide to Getting Fit</h1>
     <p class="tagline">Slay your way to fitness, 5 minutes at a time.</p>
+
+    <div class="cute-banner">
+      <img src="https://i.pinimg.com/originals/b9/d3/25/b9d3257ad2519e7e4d993eb561693bc1.png" alt="Cute Lazy Girl" />
+    </div>
 
     <div class="workout-card">
       <h2>Today's Lazy Workout:</h2>
@@ -43,33 +47,33 @@
         <li><a href="https://open.spotify.com/track/1yL7vKZFBAR9G8vrsrh8DJ" target="_blank">I'm That Girl – Beyoncé</a></li>
       </ul>
     </div>
-    
-  <div class="spotify-embed">
-  <h2>🎧 Vibe While You Slay</h2>
-  <iframe style="border-radius:12px" 
-    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2RxBh64BHjQ?utm_source=generator" 
-    width="100%" 
-    height="152" 
-    frameBorder="0" 
-    allowfullscreen="" 
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-    loading="lazy">
-  </iframe>
-</div>
-  
-<div class="journal-section">
-  <h2>📝 Lazy Girl Journal</h2>
-  <textarea id="journal" placeholder="Write how you feel today..."></textarea>
-  <button onclick="saveJournal()">💾 Save Entry</button>
-  <p id="save-message"></p>
-</div>
-    
-<div class="water-tracker">
-  <h2>💧 Water Tracker</h2>
-  <p>Glasses of water today: <span id="water-count">0</span></p>
-  <button onclick="addWater()">+ Add Glass</button>
-  <button onclick="resetWater()">🔄 Reset</button>
-</div>
+
+    <div class="spotify-embed">
+      <h2>🎧 Vibe While You Slay</h2>
+      <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2RxBh64BHjQ?utm_source=generator" 
+        width="100%" 
+        height="152" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="journal-section">
+      <h2>📝 Lazy Girl Journal</h2>
+      <textarea id="journal" placeholder="Write how you feel today..."></textarea>
+      <button onclick="saveJournal()">💾 Save Entry</button>
+      <p id="save-message"></p>
+    </div>
+
+    <div class="water-tracker">
+      <h2>💧 Water Tracker</h2>
+      <p>Glasses of water today: <span id="water-count">0</span></p>
+      <button onclick="addWater()">+ Add Glass</button>
+      <button onclick="resetWater()">🔄 Reset</button>
+    </div>
 
     <footer>
       <nav>
@@ -82,7 +86,6 @@
     </footer>
   </div>
 
-  <!-- 🧠 JS scripts must come at the very end -->
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
