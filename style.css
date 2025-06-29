@@ -8,12 +8,14 @@ body {
 }
 
 .app-container {
-  max-width: 400px;
-  margin: auto;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
   background: #fff0f5;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 h1 {
@@ -185,4 +187,41 @@ button:hover {
   border: 2px solid #e6ccff;
   box-shadow: 0 6px 15px rgba(123, 44, 191, 0.15);
   border-radius: 12px;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .tagline,
+  .workout-title,
+  .affirmation,
+  .playlist,
+  .progress-check {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #journal {
+    height: 100px;
+  }
+
+  iframe {
+    height: 130px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
 }
