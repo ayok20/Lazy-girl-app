@@ -1,81 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lazy Girl’s Guide</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <div class="app-container">
-    <h1>Lazy Girl’s Guide to Getting Fit</h1>
-    <p class="tagline">Slay your way to fitness, 5 minutes at a time.</p>
-
-    <div class="workout-card">
-      <h2>Today's Lazy Workout:</h2>
-      <p class="workout-title">5-Min Morning Stretch</p>
-      <button class="start">Start</button>
-      <button
-        
-class="shuffle">Shuffle</button>
-    </div>
-<p class="timer-display">⏱️ 5:00</p>
-
-    <div class="affirmation">
-      <p id="affirmation-text">You got this, hot girl!</p>
-    </div>
-
-    <div class="progress-check">
-      <label>
-        <input type="checkbox" />
-        Did you work out today?
-      </label>
-    </div>
-
-    <div class="playlist">
-      🎵 <a href="#">Lazy Girl Playlist</a> 🎵
-    </div>
-
-.playlist-section {
-  margin-top: 40px;
+body {
+  margin: 0;
   padding: 20px;
-  background-color: #fdf0ff;
+  font-family: 'Poppins', 'Arial Rounded', sans-serif;
+  background: linear-gradient(135deg, #fff0f6, #ffe6fa);
+  color: #333;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 400px;
+  margin: auto;
+  background: #fff0f5;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #b0006d;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.workout-card {
+  background: #ffd1dc;
+  padding: 15px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.playlist-section h2 {
-  color: #d81b60;
-  font-size: 22px;
-  margin-bottom: 10px;
+.workout-title {
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-.playlist li {
-  margin: 8px 0;
-  list-style-type: 🎧;
+button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.playlist a {
-  color: #5e0080;
-  text-decoration: none;
-  font-weight: 600;
+.start {
+  background-color: #99ddcc;
 }
 
-.playlist a:hover {
-  text-decoration: underline;
+.shuffle {
+  background-color: #d9b3ff;
 }
 
-    <footer>
-      <nav>
-        <a href="#">Home</a> |
-        <a href="#">Journal</a> |
-        <a href="#">About</a> |
-        <a href="#">Contact</a>
-      </nav>
-      <p>© 2025 Lazy Girl by House of Beauty</p>
-    </footer>
-  </div>
+.affirmation {
+  background: #e6ccff;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-</body>
-</html>
+.progress-check {
+  background: #ffb3c6;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.playlist {
+  background: #d9b3ff;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+.timer-display {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #b0006d;
+  margin-top: 10px;
+}
