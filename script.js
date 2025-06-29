@@ -44,3 +44,17 @@ function startTimer() {
     }
   }, 1000);
 }
+
+function saveJournal() {
+  const journalEntry = document.getElementById('journal').value;
+  localStorage.setItem('lazyGirlJournal', journalEntry);
+  document.getElementById('save-message').textContent = "Saved! ✅";
+}
+
+// Load saved entry on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedEntry = localStorage.getItem('lazyGirlJournal');
+  if (savedEntry) {
+    document.getElementById('journal').value = savedEntry;
+  }
+});
