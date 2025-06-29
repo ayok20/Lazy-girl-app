@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lazy Girl’s Guide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+    <h1>Lazy Girl’s Guide to Getting Fit</h1>
+    <p class="tagline">Slay your way to fitness, 5 minutes at a time.</p>
+
+    <div class="workout-card">
+      <h2>Today's Lazy Workout:</h2>
+      <p class="workout-title">5-Min Morning Stretch</p>
+      <button class="start">Start</button>
+      <button
+        
+class="shuffle">Shuffle</button>
+    </div>
+<p class="timer-display">⏱️ 5:00</p>
+
+    <div class="affirmation">
+      <p id="affirmation-text">You got this, hot girl!</p>
+    </div>
+
+    <div class="progress-check">
+      <label>
+        <input type="checkbox" />
+        Did you work out today?
+      </label>
+    </div>
+
+    <div class="playlist">
+      🎵 <a href="#">Lazy Girl Playlist</a> 🎵
+    </div>
+
+    <footer>
+      <nav>
+        <a href="#">Home</a> |
+        <a href="#">Journal</a> |
+        <a href="#">About</a> |
+        <a href="#">Contact</a>
+      </nav>
+      <p>© 2025 Lazy Girl by House of Beauty</p>
+    </footer>
+  </div>
+
+</body>
+</html>
