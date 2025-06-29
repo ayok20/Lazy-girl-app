@@ -37,6 +37,35 @@ class="shuffle">Shuffle</button>
       🎵 <a href="#">Lazy Girl Playlist</a> 🎵
     </div>
 
+.playlist-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fdf0ff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-section h2 {
+  color: #d81b60;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.playlist li {
+  margin: 8px 0;
+  list-style-type: 🎧;
+}
+
+.playlist a {
+  color: #5e0080;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.playlist a:hover {
+  text-decoration: underline;
+}
+
     <footer>
       <nav>
         <a href="#">Home</a> |
