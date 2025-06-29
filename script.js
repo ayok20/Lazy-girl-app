@@ -58,3 +58,21 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('journal').value = savedEntry;
   }
 });
+
+let waterCount = localStorage.getItem('lazyGirlWater') 
+  ? parseInt(localStorage.getItem('lazyGirlWater')) 
+  : 0;
+
+document.getElementById('water-count').textContent = waterCount;
+
+function addWater() {
+  waterCount++;
+  document.getElementById('water-count').textContent = waterCount;
+  localStorage.setItem('lazyGirlWater', waterCount);
+}
+
+function resetWater() {
+  waterCount = 0;
+  document.getElementById('water-count').textContent = waterCount;
+  localStorage.setItem('lazyGirlWater', waterCount);
+}
