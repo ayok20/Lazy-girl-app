@@ -360,3 +360,39 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(24px);
 }
+
+body.dark-mode {
+  background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+  color: #f5f5f5;
+}
+
+body.dark-mode .app-container {
+  background-color: #333;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .workout-card,
+body.dark-mode .affirmation,
+body.dark-mode .progress-check,
+body.dark-mode .playlist,
+body.dark-mode .journal-section,
+body.dark-mode .water-tracker {
+  background-color: #444;
+  color: #f5f5f5;
+  border-color: #777;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #888;
+}
+
+body.dark-mode .cute-banner img {
+  filter: brightness(0.8);
+}
+
+body.dark-mode .timer-display {
+  color: #ff99cc;
+}
