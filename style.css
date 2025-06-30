@@ -396,3 +396,7 @@ body.dark-mode .cute-banner img {
 body.dark-mode .timer-display {
   color: #ff99cc;
 }
+
+body.dark-mode .cute-banner img {
+  filter: brightness(0.9) contrast(1.1);
+}
