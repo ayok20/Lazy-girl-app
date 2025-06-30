@@ -80,3 +80,55 @@ function resetWater() {
 function closeWelcome() {
   document.getElementById('welcome-overlay').style.display = 'none';
 }
+
+const modeToggle = document.getElementById('modeToggle');
+
+// Load saved mode
+window.addEventListener('DOMContentLoaded', () => {
+  const darkMode = localStorage.getItem('lazyGirlDarkMode');
+  if (darkMode === 'enabled') {
+    document.body.classList.add('dark-mode');
+    modeToggle.checked = true;
+  }
+});
+
+// Toggle switch logic
+modeToggle.addEventListener('change', () => {
+  if (modeToggle.checked) {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('lazyGirlDarkMode', 'enabled');
+  } else {
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('lazyGirlDarkMode', 'disabled');
+  }
+});
+
+// ⛔ Prevent multiple timers
+let timerRunning = false;
+
+function startTimer() {
+  if (timerRunning) return;
+  timerRunning = true;
+
+  let time = 5 * 60;
+  const interval = setInterval(() => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    timerDisplay.textContent = `⏱️ ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    time--;
+
+    if (time < 0) {
+      clearInterval(interval);
+      timerDisplay.textContent = "🎉 You did it!";
+      confetti();
+      timerRunning = false;
+    }
+  }, 1000);
+}
+
+// 🕒 Auto-close welcome screen after 4s
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('welcome-overlay').style.display = 'none';
+  }, 4000);
+});
