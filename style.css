@@ -403,3 +403,29 @@ body.dark-mode .timer-display {
 body.dark-mode .cute-banner img {
   filter: brightness(0.9) contrast(1.1);
 }
+
+.extra-workouts {
+  background-color: #fff0f6;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.extra-workouts h2 {
+  text-align: center;
+  color: #b0006d;
+  margin-bottom: 10px;
+}
+
+.extra-workouts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.extra-workouts li {
+  padding: 8px;
+  border-bottom: 1px dashed #ffc0cb;
+  font-size: 16px;
+}
