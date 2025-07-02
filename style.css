@@ -429,3 +429,38 @@ body.dark-mode .cute-banner img {
   border-bottom: 1px dashed #ffc0cb;
   font-size: 16px;
 }
+
+.workout-gallery {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff4fb;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.workout-gallery h2 {
+  font-family: 'Cookie', cursive;
+  color: #b0006d;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
