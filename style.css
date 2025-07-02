@@ -479,3 +479,14 @@ body.dark-mode .cute-banner img {
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+.cute-workout-pose {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.cute-workout-pose img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+}
